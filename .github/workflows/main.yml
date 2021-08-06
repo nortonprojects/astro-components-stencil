@@ -16,7 +16,6 @@ jobs:
                   NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
             - name: Run Cypress
               uses: cypress-io/github-action@v2
-              with:
     cypress-stencil:
         runs-on: ubuntu-latest
         steps:
@@ -26,4 +25,6 @@ jobs:
             - name: Run Cypress
               uses: cypress-io/github-action@v2
               with:
-                start: npm run start
+                build: npm run build
+                start: npm run setup-test
+                config-file: cypress.forms.json
