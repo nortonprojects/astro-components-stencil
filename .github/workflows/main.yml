@@ -16,7 +16,6 @@ jobs:
                   NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
             - name: Run Cypress
               uses: cypress-io/github-action@v2
-              with:
     cypress-stencil:
         runs-on: ubuntu-latest
         steps:
